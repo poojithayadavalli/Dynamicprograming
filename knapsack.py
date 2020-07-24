@@ -50,7 +50,8 @@ def solution(W, wt, val, n):
                 K[i][w] = K[i-1][w]
     return K[n][W]
 
-n,k=map(int,input().split())
+n=int(input())
+k=int(input())
 weight=list(map(int,input().split()))
 val=list(map(int,input().split()))
 print(solution(k,weight,val,n))
