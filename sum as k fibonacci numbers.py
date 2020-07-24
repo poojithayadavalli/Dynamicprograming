@@ -25,13 +25,12 @@ Explanation :
 
 """
  
-def fibonacci(n):
-    fib = [0] * n 
+def fibonacci(n,fib): 
     fib[0] = 1
     fib[1] = 2
     for i in range(2,n):  
         fib[i] = fib[i - 1] + fib[i - 2] 
-def rec(x, y, last): 
+def rec(x, y, last,fib):
     if y == 0:  
         if x == 0:  
             return 1
@@ -42,11 +41,13 @@ def rec(x, y, last):
         if fib[i] > x: 
             i -= 1
             continue
-        Sum += rec(x - fib[i], y - 1, i)  
+        Sum += rec(x - fib[i], y - 1, i,fib)  
         i -= 1
           
     return Sum
 
 n,k=map(int,input().split())
-fibonacci(n)
-print(rec(n,k,n-1))
+fib = [0] * n
+fibonacci(n,fib)
+print(rec(n,k,n-1,fib))
+
