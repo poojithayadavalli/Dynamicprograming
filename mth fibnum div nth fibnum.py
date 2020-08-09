@@ -2,7 +2,7 @@
 
 Raju is learning about fibonacci numbers ,he saw a task and the task is as follows:
 
-Given two numbers M and N, the task is to check if the M-th and N-th Fibonacci numbers perfectly divide each other or not.
+Given two numbers M and N, the task is to check if the M-th Fibonacci number perfectly divide Nth Fibonacci number or not.
 
 Input:
 
@@ -32,7 +32,7 @@ Input:
 9
 
 Output:
-No
+Yes
 """
 def check(n, m):
     if (n == 2 or m == 2 or
