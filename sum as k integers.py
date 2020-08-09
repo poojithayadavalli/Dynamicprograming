@@ -50,4 +50,5 @@ def binomialCoeff(n, k):
     return C[n][k]
 n=int(input())
 k=int(input())
-print(binomialCoeff(n,k))
+print(binomialCoeff(n-1,k-1))
+
